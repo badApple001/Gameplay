@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jLFyR4VrMBOyrL4K3q4skMgCpxZY1Bk5buk5F+MGaw4oWGliORHR/hBu2CQaPPfydlFsC0r5VbL/UsnV0jzM+Q==",
+  "success": true,
+  "projectFilePath": "E:\\CSharp_Workspace\\Gameplay\\GameCustomInspector\\GameCustomInspector.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

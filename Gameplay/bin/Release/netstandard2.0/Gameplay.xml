@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Gameplay</name>
+    </assembly>
+    <members>
+        <member name="M:Gameplay.EasyObjectPool.TransformPool.#ctor(UnityEngine.GameObject,UnityEngine.Transform)">
+            <summary>
+            模板预设
+            </summary>
+            <param name="prefab"> 预设 </param>
+            <param name="parent"> 指定一个父类 </param>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.TransformPool.Pop">
+            <summary>
+            激活对象
+            
+            从闲置链表中推出一个闲置对象 并将其加入激活列表的中
+            通常情况下 你只需要处理激活列表中的对象即可
+            
+            </summary>
+            <returns> 你需要为他设置父类 并为它设置 Active为true </returns>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.TransformPool.Push_Back(UnityEngine.Transform)">
+            <summary>
+            限制对象
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.TransformPool.GetElementState(UnityEngine.Transform)">
+            <summary>
+            获取对象在池中的状态
+            </summary>
+            <param name="dest"> enum: PoolElementState </param>
+            <returns></returns>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.TransformPool.InSidePool(UnityEngine.Transform)">
+            <summary>
+            是否在对象池
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.TransformPool.Recycle">
+            <summary>
+            回收所有激活的对象
+            </summary>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.TransformPool.Reserve(System.Int32)">
+            <summary>
+            预定一定数量的预设
+            </summary>
+            <param name="count"></param>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.TransformPool.Release">
+            <summary>
+            此操作会完全释放对象的内存占用 是delete哦~
+            </summary>
+        </member>
+        <member name="P:Gameplay.EasyObjectPool.TransformPool.FreeCount">
+            <summary>
+            获取当前闲置数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Gameplay.EasyObjectPool.TransformPool.Capacity">
+            <summary>
+            获取当前池子容量
+            </summary>
+        </member>
+        <member name="T:Gameplay.EasyObjectPool.PreloadConfigs">
+            <summary>
+            预设配置
+            </summary>
+        </member>
+        <member name="P:Gameplay.EasyObjectPool.firstPreloadFinish">
+            <summary>
+            首次加载是否完成
+            </summary>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.Spawn(System.String)">
+            <summary>
+            从对象池中拿一个闲置的对象
+            </summary>
+            <param name="key"></param>
+            <returns>当返回null时 说明不存在这个预设的池子 你可以使用 GeneratePool 来添加一个新的池子 </returns>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.Despawn(UnityEngine.Transform)">
+            <summary>
+            回收一个对象到对象池中
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.Despawn(System.String)">
+            <summary>
+            将指定key的缓存池内所有的对象全部回收
+            </summary>
+            <param name="pool"></param>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.Despawn(UnityEngine.Transform,System.Single)">
+            <summary>
+            延迟回收
+            </summary>
+            <param name="obj"></param>
+            <param name="delay"></param>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.Contains(UnityEngine.Transform)">
+            <summary>
+            是否是对象池元素
+            </summary>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.DespawnSelfAny``1(UnityEngine.Transform)">
+            <summary>
+            回收自身所有的对象池元素 ( 包含自身 )
+            </summary>
+            <param name="root"></param>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.DespawnChildren(UnityEngine.Transform,System.Boolean,System.Boolean)">
+            <summary>
+            回收自己的子节点 如果子节点是对象池元素的话
+            </summary>
+            <param name="root"> 父节点 </param>
+            <param name="includeSelf"> 本次回收是否包含父节点 </param>
+            <param name="force"> true: 遍历所有的孩子节点  false: 仅遍历一层 </param>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.Add(UnityEngine.GameObject,System.Int32)">
+            <summary>
+            新增要给对象池
+            </summary>
+            <param name="prefab"></param>
+            <param name="firstExpandCount"></param>
+        </member>
+        <member name="M:Gameplay.EasyObjectPool.Recycle">
+            <summary>
+            回收所有激活对象
+            </summary>
+        </member>
+        <member name="T:Gameplay.EasyTimer">
+             <summary>
+            
+             Timer
+             当前定时器程序为游戏运行真实时间 不受Time.timeScale的影响 切记
+             
+             Anchor: ChenJC
+             Time: 2022/10/09
+             Document: https://blog.csdn.net/qq_39162566/article/details/113105351
+             </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Gameplay.EasyTimer.SetInterval(System.Single,System.Action,System.Boolean,System.Int32)" -->
+        <member name="M:Gameplay.EasyTimer.GetTimer(System.Int32)">
+            <summary>
+            通过Tag获取定时器对象
+            </summary>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Gameplay.EasyTimer.GetTimer(System.Action)">
+            <summary>
+            通过Tag获取定时器对象
+            </summary>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Gameplay.EasyTimer.ClearTimer(System.Int32)">
+            <summary>
+            通过ID 清理定时器
+            </summary>
+            <param name="tag">定时器标签</param>
+            <returns></returns>
+        </member>
+        <member name="M:Gameplay.EasyTimer.ClearTimer(System.Action)">
+            <summary>
+            通过方法 清理定时器
+            </summary>
+            <param name="func">处理方法</param>
+            <returns></returns>
+        </member>
+        <member name="M:Gameplay.EasyTimer.ClearTimers">
+            <summary>
+            清理所有定时器
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "qIAktIZDkhSTX02gCCV0nUOR+/wcvgdf+HHB8VF1qln0R1z2tuPIQ8TC1rVq3c6xvFn+pbOm5xDN9u2LGsfQyw==",
+  "success": true,
+  "projectFilePath": "E:\\CSharp_Workspace\\Gameplay\\Gameplay\\Gameplay.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
